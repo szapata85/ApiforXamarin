@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj": {}
+    "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\APIHolaMundo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj": {
+    "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\APIHolaMundo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj",
-        "projectName": "HolaMundoAPI",
-        "projectPath": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\APIHolaMundo.csproj",
+        "projectName": "APIHolaMundo",
+        "projectPath": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\APIHolaMundo.csproj",
         "packagesPath": "C:\\Users\\CHECHO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\HolaMundoAPI\\obj\\",
+        "outputPath": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,10 +46,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.9, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
