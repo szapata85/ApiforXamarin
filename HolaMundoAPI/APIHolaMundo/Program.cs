@@ -13,19 +13,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseContext") ?? throw new InvalidOperationException("Connection string 'DatabaseContext' not found.")));
 
-
+builder.Services.AddScoped<SeedDb>();
 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
-{
-    DatabaseContext context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-    context.Database.Migrate();
-    //var services = scope.ServiceProvider;
+{   
+    IServiceProvider services = scope.ServiceProvider;
 
-    //var seedDb = services.GetRequiredService<SeedDb>();
+    SeedDb seedDb = services.GetRequiredService<SeedDb>();
 
-    //await seedDb.SeedAsync();
+    await seedDb.SeedAsync();
 }
 
 

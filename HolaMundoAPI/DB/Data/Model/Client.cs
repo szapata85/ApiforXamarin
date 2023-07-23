@@ -15,8 +15,6 @@ namespace DB.Data.Model
 
         [Required]
         public string Dna { get; set; }
-
-        public virtual ICollection<Phone> Phones { get; set; }
     }
 
 }
