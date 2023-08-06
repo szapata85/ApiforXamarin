@@ -1,9 +1,7 @@
 ﻿using DB.Data;
-using DB.Data.Model;
-using Microsoft.AspNetCore.Http;
+using DB.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace APIHolaMundo.Controllers
 {

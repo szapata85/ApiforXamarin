@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace DB.Data.Model
+namespace DB.Data.Models
 {
     public class Client
     {
