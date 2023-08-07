@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bPnxm0XpyI4B41PcozfMTtdK0RIRjhynXWDXGWIKjo2KLLsjQI5+SN6wGB++kOOpInmGXpMD8jTOc9097MNlyg==",
+  "dgSpecHash": "xiCqniBMNpGFo46KhUAjmXbveZScPJAhGS0otID6CCeBfjfeMFH/ILEZg6Tvp52+ayk8Ke3GX/IpzYzm5fHRvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\CHECHO\\Downloads\\Xamarin Forms\\Project\\ApiforXamarin\\HolaMundoAPI\\APIHolaMundo\\APIHolaMundo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CHECHO\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\CHECHO\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\CHECHO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\CHECHO\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.20\\microsoft.aspnetcore.authentication.jwtbearer.6.0.20.nupkg.sha512",
     "C:\\Users\\CHECHO\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\CHECHO\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\CHECHO\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",
