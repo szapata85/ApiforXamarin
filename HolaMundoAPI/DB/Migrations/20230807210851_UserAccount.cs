@@ -5,7 +5,7 @@
 namespace DB.Migrations
 {
     /// <inheritdoc />
-    public partial class AddUserROL : Migration
+    public partial class UserAccount : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

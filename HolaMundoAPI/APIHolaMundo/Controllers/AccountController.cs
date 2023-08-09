@@ -1,11 +1,10 @@
 ﻿using APIHolaMundo.Services.Interfaces;
 using DB.Data.Dto;
-using Microsoft.AspNetCore.Authorization;
+using DB.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIHolaMundo.Controllers
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -19,10 +18,10 @@ namespace APIHolaMundo.Controllers
             _accountService = accountService;
         }
 
-        [HttpPost("Login")]
+        [HttpGet("Login")]
         public async Task<IActionResult> Login(string userName, string password)
         {
-            var user = await _userService.GetUserAsync(userName, password);
+            User user = await _userService.GetUserAsync(userName, password);
 
             if (user == null)
             {
@@ -43,5 +42,4 @@ namespace APIHolaMundo.Controllers
 
         // Otros métodos para SignIn, Logout, ForgotPassword, etc.
     }
-
 }

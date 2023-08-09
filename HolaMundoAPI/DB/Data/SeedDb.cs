@@ -22,7 +22,6 @@ namespace DB.Data
                 this.AddClient("First Client");
                 this.AddClient("Second Client");
                 this.AddClient("Third Client");
-
                 await this.context.SaveChangesAsync();
             }
 
@@ -46,13 +45,11 @@ namespace DB.Data
 
         private void AddClient(string name)
         {
-            Models.Client client = new Models.Client()
+            this.context.Clients.Add(new Models.Client
             {
                 Name = name,
                 Dna = this.random.Next(1000000, 1999999).ToString()
-            };
-
-            this.context.Clients.Add(client);
+            });
         }
 
         private void AddUserRole(string roleName, RoleType roleType)
@@ -73,6 +70,7 @@ namespace DB.Data
                 RoleId = userRoleId
             });
         }
+
 
     }
 }

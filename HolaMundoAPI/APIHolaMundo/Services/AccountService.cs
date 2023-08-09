@@ -36,6 +36,5 @@ namespace APIHolaMundo.Services
             var stringToken = tokenHandler.WriteToken(token);
             return stringToken;
         }
-
     }
 }

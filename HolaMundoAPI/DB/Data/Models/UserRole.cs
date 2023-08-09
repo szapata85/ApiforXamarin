@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using DB.Data.Enumerations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using DB.Data.Enumerations;
 
 namespace DB.Data.Models
 {
