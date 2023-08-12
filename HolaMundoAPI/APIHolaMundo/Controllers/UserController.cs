@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace APIHolaMundo.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
