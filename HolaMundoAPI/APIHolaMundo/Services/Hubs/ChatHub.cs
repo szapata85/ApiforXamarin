@@ -21,13 +21,31 @@ namespace APIHolaMundo.Services.Hubs
             return base.OnConnectedAsync();
         }
 
+        public override Task OnDisconnectedAsync(Exception exception)
+        {
+            int? deviceId = connectionDevices.ContainsKey(Context.ConnectionId) ?
+                            (int?)connectionDevices[Context.ConnectionId] :
+                            null;
+
+            if (deviceId.HasValue)
+            {
+                deviceConnections.Remove(deviceId.Value);
+                connectionDevices.Remove(Context.ConnectionId);
+            }
+
+            List<KeyValuePair<int, string>> listNumber = deviceConnections.ToList();
+
+            Clients.All.SendAsync("ReceiveDevices", listNumber);
+            return base.OnDisconnectedAsync(exception);
+        }
+
         [HubMethodName("Init")]
         public Task Init(DeviceInfo info)
         {
             deviceConnections.AddOrUpdate(info.Id, Context.ConnectionId);
             connectionDevices.AddOrUpdate(Context.ConnectionId, info.Id);
 
-            var listNumber = deviceConnections.ToList();
+            List<KeyValuePair<int,string>> listNumber = deviceConnections.ToList();
 
             Clients.All.SendAsync("ReceiveDevices", listNumber);
 
@@ -38,6 +56,13 @@ namespace APIHolaMundo.Services.Hubs
         public async Task SendMessage(string userId, string message)
         {
             await Clients.All.SendAsync("Receive", userId, message);
+        }
+
+        [HubMethodName("SendMessageToDevice")]
+        public async Task SendMessageToDevice(MessageItem item)
+        {
+            if (deviceConnections.ContainsKey(item.TargetId))
+                await Clients.Client(deviceConnections[item.TargetId]).SendAsync("Receive", item);
         }
     }
 }
