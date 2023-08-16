@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIHolaMundo.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClientsController : ControllerBase
