@@ -52,10 +52,10 @@ namespace APIHolaMundo.Services.Hubs
             return Task.CompletedTask;
         }
 
-        [HubMethodName("SendMessageAll")]
-        public async Task SendMessage(string userId, string message)
+        [HubMethodName("SendMessageToAll")]
+        public async Task SendMessageToAll(MessageItem item)
         {
-            await Clients.All.SendAsync("Receive", userId, message);
+            await Clients.All.SendAsync("Receive", item);
         }
 
         [HubMethodName("SendMessageToDevice")]
