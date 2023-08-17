@@ -7,9 +7,6 @@ using System.Text;
 using APIHolaMundo.Services.Interfaces;
 using APIHolaMundo.Services;
 using APIHolaMundo.Services.Hubs;
-using LLama.Abstractions;
-using LLama;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +25,8 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 builder.Services.AddScoped<SeedDb>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IChatService, ChatService>();
+//builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddSingleton<IChatService, ChatService>();
 
 builder.Services.AddSwaggerGen(option =>
 {
