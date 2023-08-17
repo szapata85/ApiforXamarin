@@ -9,6 +9,8 @@
       "APIHolaMundo/1.0.0": {
         "dependencies": {
           "DB": "1.0.0",
+          "LLamaSharp": "0.4.0",
+          "LLamaSharp.Backend.Cpu": "0.3.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.20",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.9",
           "Swashbuckle.AspNetCore": "6.5.0"
@@ -56,6 +58,33 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "LLamaSharp/0.4.0": {
+        "runtime": {
+          "lib/net6.0/LLamaSharp.dll": {
+            "assemblyVersion": "0.4.0.0",
+            "fileVersion": "0.4.0.0"
+          }
+        }
+      },
+      "LLamaSharp.Backend.Cpu/0.3.1": {
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libllama.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libllama.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libllama.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -796,6 +825,20 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "LLamaSharp/0.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vTn3p8hwgHYYXk2ZfBQfH3oKlk1ZE4zwnf4lReN3zef+97cxfdQImLxUtRL0RdDubQ786u3yGVXw1cNrTZ7Zyw==",
+      "path": "llamasharp/0.4.0",
+      "hashPath": "llamasharp.0.4.0.nupkg.sha512"
+    },
+    "LLamaSharp.Backend.Cpu/0.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xQFgx6Uzo3MnV37nS4ePURuIGJErVgbvhtfqzIFBi59poxbbPKUxEROQHu9naPvuV+5PAtTLs9tEpBnAJ6/RMw==",
+      "path": "llamasharp.backend.cpu/0.3.1",
+      "hashPath": "llamasharp.backend.cpu.0.3.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.20": {
       "type": "package",

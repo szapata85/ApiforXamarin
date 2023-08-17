@@ -88,3 +88,7 @@ C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHo
 C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\obj\Debug\net6.0\APIHolaMundo.pdb
 C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\obj\Debug\net6.0\APIHolaMundo.genruntimeconfig.cache
 C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\obj\Debug\net6.0\ref\APIHolaMundo.dll
+C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\bin\Debug\net6.0\LLamaSharp.dll
+C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\bin\Debug\net6.0\runtimes\linux-x64\native\libllama.so
+C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\bin\Debug\net6.0\runtimes\osx-x64\native\libllama.dylib
+C:\Users\CHECHO\Downloads\Xamarin Forms\Project\ApiforXamarin\HolaMundoAPI\APIHolaMundo\bin\Debug\net6.0\runtimes\win-x64\native\libllama.dll
