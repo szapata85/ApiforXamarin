@@ -40,7 +40,7 @@ namespace APIHolaMundo.Services.Hubs
         }
 
         [HubMethodName("Init")]
-        public Task Init(DeviceInfo info)
+        public Task Init(InfoDevice info)
         {
             deviceConnections.AddOrUpdate(info.Username, Context.ConnectionId);
             connectionDevices.AddOrUpdate(Context.ConnectionId, info.Username);

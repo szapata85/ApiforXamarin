@@ -1,6 +1,6 @@
 ﻿namespace DB.Data.Models.ChatHub
 {
-    public class DeviceInfo
+    public class InfoDevice
     {
         public string Username { get; set; }
     }
