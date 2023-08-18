@@ -6,13 +6,13 @@ namespace APIHolaMundo.Services.Hubs
 {
     public class ChatHub:Hub
     {
-        private static Dictionary<int, string> deviceConnections;
-        private static Dictionary<string, int> connectionDevices;
+        private static Dictionary<string, string> deviceConnections;
+        private static Dictionary<string, string> connectionDevices;
 
         public ChatHub()
         {
-            deviceConnections = deviceConnections ?? new Dictionary<int, string>();
-            connectionDevices = connectionDevices ?? new Dictionary<string, int>();
+            deviceConnections = deviceConnections ?? new Dictionary<string, string>();
+            connectionDevices = connectionDevices ?? new Dictionary<string, string>();
         }
 
         public override Task OnConnectedAsync()
@@ -23,17 +23,17 @@ namespace APIHolaMundo.Services.Hubs
 
         public override Task OnDisconnectedAsync(Exception exception)
         {
-            int? deviceId = connectionDevices.ContainsKey(Context.ConnectionId) ?
-                            (int?)connectionDevices[Context.ConnectionId] :
+            string? deviceId = connectionDevices.ContainsKey(Context.ConnectionId) ?
+                            (string?)connectionDevices[Context.ConnectionId] :
                             null;
 
-            if (deviceId.HasValue)
+            if (!string.IsNullOrEmpty(deviceId))
             {
-                deviceConnections.Remove(deviceId.Value);
+                deviceConnections.Remove(deviceId);
                 connectionDevices.Remove(Context.ConnectionId);
             }
 
-            List<KeyValuePair<int, string>> listNumber = deviceConnections.ToList();
+            List<KeyValuePair<string, string>> listNumber = deviceConnections.ToList();
 
             Clients.All.SendAsync("ReceiveDevices", listNumber);
             return base.OnDisconnectedAsync(exception);
@@ -42,10 +42,10 @@ namespace APIHolaMundo.Services.Hubs
         [HubMethodName("Init")]
         public Task Init(DeviceInfo info)
         {
-            deviceConnections.AddOrUpdate(info.Id, Context.ConnectionId);
-            connectionDevices.AddOrUpdate(Context.ConnectionId, info.Id);
+            deviceConnections.AddOrUpdate(info.Username, Context.ConnectionId);
+            connectionDevices.AddOrUpdate(Context.ConnectionId, info.Username);
 
-            List<KeyValuePair<int,string>> listNumber = deviceConnections.ToList();
+            List<KeyValuePair<string,string>> listNumber = deviceConnections.ToList();
 
             Clients.All.SendAsync("ReceiveDevices", listNumber);
 
