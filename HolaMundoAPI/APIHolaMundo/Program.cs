@@ -74,6 +74,7 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 app.MapHub<ChatHub>("/ChatHub");
+app.MapHub<ChatBotHub>("/ChatBotHub");
 
 using (var scope = app.Services.CreateScope())
 {   
