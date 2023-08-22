@@ -21,4 +21,8 @@
     <ProjectReference Include="..\DB\DB.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model_IA\" />
+  </ItemGroup>
+
 </Project>
